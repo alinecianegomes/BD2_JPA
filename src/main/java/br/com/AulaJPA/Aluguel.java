@@ -15,7 +15,7 @@ public class Aluguel {
     private String categoria;
 
     @NotNull
-    @Column(nullable = false, length = 200)
+    @Column(nullable = false, length = 500)
     private String descricao;
     private String imagem;
     
