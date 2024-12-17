@@ -10,9 +10,17 @@ public class Servico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Column(nullable = false, length = 100)
     private String categoria;
+
+    @NotNull
+    @Column(nullable = false, length = 500)
     private String descricao;
     private String imagem;
+
+    @NotNull
+    @Column(nullable = false, length = 50)
     private String nome;
 
     @OneToMany(mappedBy = "servico", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
