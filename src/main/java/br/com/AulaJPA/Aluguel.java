@@ -10,9 +10,17 @@ public class Aluguel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Column(nullable = false, length = 100)
     private String categoria;
+
+    @NotNull
+    @Column(nullable = false, length = 200)
     private String descricao;
     private String imagem;
+    
+    @NotNull
+    @Column(nullable = false, length = 100)
     private String nome;
 
     @OneToMany(mappedBy = "aluguel",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
