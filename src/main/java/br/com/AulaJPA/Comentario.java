@@ -9,7 +9,13 @@ public class Comentario {
     private Long id;
 
     private Long postID;
+
+    @NotNull
+    @Column(nullable=false)
     private String text;
+
+    @NotNull
+    @Column(nullable=false)
     private String usuario; 
     private String userPhoto;
 
