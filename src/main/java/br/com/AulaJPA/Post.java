@@ -10,7 +10,12 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Column(nullable = false, length = 500)    
     private String description;
+
+    @NotNull
+    @Column(nullable = false, length = 50)
     private String usuario;
 
     @OneToMany(mappedBy = "post", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
