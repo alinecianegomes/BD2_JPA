@@ -8,20 +8,31 @@ public class Avaliacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Column(nullable = false)
     private int avaliacao;
     private String comentario;
+    
+    @NotNull
+    @Column(nullable = false)
     private Long itemid;
     private String tipoItem;
+
+    @NotNull
+    @Column(nullable = false)
     private Long usuarioId;
     private String userphoto;
 
     @ManyToOne
+    @JoinColumn(name = "aluguel_id")
     private Aluguel aluguel;
 
     @ManyToOne
+    @JoinColumn(name = "comercio_id")
     private Comercio comercio;
 
     @ManyToOne
+    @JoinColumn(name = "serviço_id")
     private Servico servico;
 
     // Construtores, getters e setters
